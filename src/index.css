@@ -1,0 +1,41 @@
+/* Estilos globales de Hakan Burger con Tailwind CSS.
+   Los colores son los del Figma (página "Sistema de diseño"). Se usan así:
+   bg-naranja, text-gris-500, border-gris-100, bg-verde-claro, etc. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-negro: #111111;
+  --color-blanco: #ffffff;
+  --color-naranja: #ff7a00;
+  --color-naranja-claro: #fff1e5;
+  --color-gris-50: #f7f7f7;
+  --color-gris-100: #efefef;
+  --color-gris-300: #d9d9d9;
+  --color-gris-500: #8a8a8a;
+  --color-gris-700: #4a4a4a;
+  --color-verde: #1e9e5a;
+  --color-verde-claro: #e7f6ee;
+  --color-rojo: #d93025;
+  --color-rojo-claro: #fdecea;
+
+  /* colores de los responsables (solo para las pantallas en construcción) */
+  --color-hilda: #7b3fe4;
+  --color-daniel: #1e6fd9;
+  --color-eber: #0f9d8a;
+}
+
+@layer base {
+  body { @apply bg-gris-50 text-negro font-sans antialiased; }
+}
+
+/* Estilos de texto del Figma (usar como clase: className="titulo-1") */
+@utility display { @apply text-[40px] leading-[1.1] font-extrabold; }
+@utility titulo-1 { @apply text-[28px] leading-[1.2] font-bold; }
+@utility titulo-2 { @apply text-[22px] leading-[1.25] font-bold; }
+@utility titulo-3 { @apply text-lg leading-[1.3] font-semibold; }
+
+/* Contenedor de las pantallas del cliente */
+@utility contenedor { @apply mx-auto w-full max-w-[1200px] px-4 pt-5 pb-10 md:px-6 md:pt-8 md:pb-12; }
