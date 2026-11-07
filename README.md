@@ -5,9 +5,11 @@ Sistema web para la gestión de pedidos y delivery. React + TypeScript + Tailwin
 ## Cómo ejecutarlo
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
+
+Usar siempre **pnpm** (no npm). Para agregar una librería: `pnpm add nombre`.
 
 Abrir http://localhost:5173 (cliente) y http://localhost:5173/panel (personal).
 
