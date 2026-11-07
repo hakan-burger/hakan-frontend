@@ -55,7 +55,7 @@ export function PasosCheckout({ actual }: { actual: 1 | 2 | 3 | 4 }) {
           <div key={p} className={`flex items-center gap-2 text-[13px] ${hecho || enCurso ? 'font-semibold' : 'text-gris-500'}`}>
             <span
               className={`grid size-[22px] place-items-center rounded-full text-xs font-bold ${
-                hecho ? 'bg-negro text-blanco' : enCurso ? 'bg-naranja text-negro' : 'bg-gris-100 text-gris-500'
+                hecho ? 'bg-negro text-blanco' : enCurso ? 'bg-rojo-hakan text-blanco' : 'bg-gris-100 text-gris-500'
               }`}
             >
               {hecho ? <Check size={12} /> : n}

@@ -22,7 +22,7 @@ export default function PanelLayout() {
               key={to}
               to={to}
               className={({ isActive }) =>
-                `flex items-center gap-2.5 rounded-[10px] px-3 py-2.5 text-sm font-medium ${isActive ? 'bg-naranja text-negro' : 'hover:bg-[#222]'}`
+                `flex items-center gap-2.5 rounded-[10px] px-3 py-2.5 text-sm font-medium ${isActive ? 'bg-rojo-hakan text-blanco' : 'hover:bg-[#222]'}`
               }
             >
               <Icono size={18} /> {texto}
@@ -30,7 +30,7 @@ export default function PanelLayout() {
           ))}
         </nav>
         <span className="text-[13px] text-gris-500">Rol: Atención al cliente</span>
-        <button className="flex cursor-pointer items-center gap-1.5 text-[13px] text-naranja">
+        <button className="flex cursor-pointer items-center gap-1.5 text-[13px] text-rojo-hakan">
           <LogOut size={14} /> Cerrar sesión
         </button>
       </aside>
