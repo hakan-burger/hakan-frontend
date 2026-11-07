@@ -76,7 +76,7 @@ Cada archivo tiene arriba un comentario con lo que debe usar (servicios, funcion
 3. Usar los colores del Figma con Tailwind: `bg-naranja`, `text-gris-500`, `border-gris-100`, `bg-verde-claro`, `text-rojo`...
    Títulos: `className="titulo-1"`, `titulo-2`, `titulo-3`, `display`.
 4. Usar los componentes de `shared/components` (Boton, Campo, Tarjeta...) en vez de crear otros iguales.
-5. Una rama por persona (`feature/hilda-catalogo`, `feature/daniel-checkout`, `feature/eber-atencion`) y pull request para juntar a `main`.
+5. Una rama por tarea y pull request para juntar a `main` (ver CONTRIBUTING.md).
 
 ## Ejemplo de uso del carrito
 
@@ -86,3 +86,7 @@ import { usePedido } from '../../../../shared/context/PedidoContext'
 const { items, totales, agregarProducto, setEntrega, confirmar } = usePedido()
 agregarProducto(producto, { cantidad: 2, adicionales: [queso] })
 ```
+
+## Forma de trabajo
+
+Ramas, commits y pull requests: ver [CONTRIBUTING.md](CONTRIBUTING.md).
