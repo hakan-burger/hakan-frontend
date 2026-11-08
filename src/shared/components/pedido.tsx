@@ -46,7 +46,7 @@ const PASOS = ['Entrega', 'Comprobante', 'Pago', 'Confirmación']
 
 export function PasosCheckout({ actual }: { actual: 1 | 2 | 3 | 4 }) {
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 sm:gap-2">
       {PASOS.map((p, i) => {
         const n = i + 1
         const hecho = n < actual
@@ -55,13 +55,13 @@ export function PasosCheckout({ actual }: { actual: 1 | 2 | 3 | 4 }) {
           <div key={p} className={`flex items-center gap-2 text-[13px] ${hecho || enCurso ? 'font-semibold' : 'text-gris-500'}`}>
             <span
               className={`grid size-[22px] place-items-center rounded-full text-xs font-bold ${
-                hecho ? 'bg-negro text-blanco' : enCurso ? 'bg-naranja text-negro' : 'bg-gris-100 text-gris-500'
+                hecho ? 'bg-negro text-blanco' : enCurso ? 'bg-rojo-hakan text-blanco' : 'bg-gris-100 text-gris-500'
               }`}
             >
               {hecho ? <Check size={12} /> : n}
             </span>
             {p}
-            {n < PASOS.length && <span className="h-px w-10 bg-gris-300" />}
+            {n < PASOS.length && <span className="hidden h-px w-10 bg-gris-300 sm:block" />}
           </div>
         )
       })}

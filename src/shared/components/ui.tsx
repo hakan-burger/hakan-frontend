@@ -6,7 +6,7 @@ import { ImageIcon } from 'lucide-react'
 type VarianteBoton = 'primario' | 'oscuro' | 'secundario'
 
 const estiloBoton: Record<VarianteBoton, string> = {
-  primario: 'bg-naranja text-negro border-naranja',
+  primario: 'bg-rojo-hakan text-blanco border-rojo-hakan',
   oscuro: 'bg-negro text-blanco border-negro',
   secundario: 'bg-blanco text-negro border-negro',
 }
@@ -30,10 +30,10 @@ export function Campo({ etiqueta, error, ...props }: InputHTMLAttributes<HTMLInp
     <label className="flex flex-col gap-1.5">
       <span className="text-[13px] font-semibold">{etiqueta}</span>
       <input
-        className={`rounded-[10px] border bg-blanco px-3.5 py-3 outline-none focus:border-naranja ${error ? 'border-rojo' : 'border-gris-300'}`}
+        className={`w-full min-w-0 rounded-[10px] border bg-blanco px-3.5 py-3 outline-none focus:border-rojo-hakan ${error ? 'border-error' : 'border-gris-300'}`}
         {...props}
       />
-      {error && <span className="text-[13px] text-rojo">{error}</span>}
+      {error && <span className="text-[13px] text-error">{error}</span>}
     </label>
   )
 }
@@ -42,8 +42,8 @@ type VarianteEtiqueta = 'disponible' | 'agotado' | 'promo' | 'neutro'
 
 const estiloEtiqueta: Record<VarianteEtiqueta, string> = {
   disponible: 'bg-verde-claro text-verde',
-  agotado: 'bg-rojo-claro text-rojo',
-  promo: 'bg-naranja text-negro',
+  agotado: 'bg-error-claro text-error',
+  promo: 'bg-rojo-hakan text-blanco',
   neutro: 'bg-gris-100 text-gris-700',
 }
 
@@ -55,7 +55,7 @@ export function Tarjeta({ children, className = '', seleccionada }: { children: 
   return (
     <div
       className={`rounded-2xl border p-6 shadow-[0_1px_2px_rgb(0_0_0/0.04)] ${
-        seleccionada ? 'border-naranja bg-naranja-claro' : 'border-gris-100 bg-blanco'
+        seleccionada ? 'border-rojo-hakan bg-rojo-hakan-claro' : 'border-gris-100 bg-blanco'
       } ${className}`}
     >
       {children}
@@ -74,7 +74,7 @@ export function FotoProducto({ src, alto = 190, texto = 'Foto del producto' }: {
   )
 }
 
-const estiloAlerta = { ok: 'bg-verde-claro text-verde', error: 'bg-rojo-claro text-rojo', info: 'bg-naranja-claro text-gris-700' }
+const estiloAlerta = { ok: 'bg-verde-claro text-verde', error: 'bg-error-claro text-error', info: 'bg-rojo-hakan-claro text-gris-700' }
 
 export function Alerta({ tipo, titulo, children }: { tipo: 'ok' | 'error' | 'info'; titulo: string; children?: ReactNode }) {
   return (

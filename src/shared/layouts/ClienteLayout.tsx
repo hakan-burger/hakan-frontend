@@ -4,7 +4,7 @@ import { Search, ShoppingCart, User } from 'lucide-react'
 import { usePedido } from '../context/PedidoContext'
 import logo from '../../assets/logo.jpeg'
 
-const claseNav = ({ isActive }: { isActive: boolean }) => (isActive ? 'text-naranja' : 'hover:text-naranja')
+const claseNav = ({ isActive }: { isActive: boolean }) => (isActive ? 'text-rojo-hakan' : 'hover:text-rojo-hakan')
 
 export default function ClienteLayout() {
   const { cantidadItems } = usePedido()
@@ -36,7 +36,7 @@ export default function ClienteLayout() {
             <Link to="/carrito" aria-label="Carrito" className="relative">
               <ShoppingCart size={22} />
               {cantidadItems > 0 && (
-                <span className="absolute -top-2 -right-2.5 rounded-full bg-naranja px-1.5 text-[11px] font-bold">{cantidadItems}</span>
+                <span className="absolute -top-2 -right-2.5 rounded-full bg-rojo-hakan px-1.5 text-[11px] font-bold text-blanco">{cantidadItems}</span>
               )}
             </Link>
           </div>

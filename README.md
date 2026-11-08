@@ -73,7 +73,7 @@ Cada archivo tiene arriba un comentario con lo que debe usar (servicios, funcion
 
 1. Cada uno trabaja **solo en sus archivos** dentro de `modules/pedidos/`.
 2. La carpeta `shared/` **no se cambia sin avisar**. Si necesitas un campo nuevo o un componente, se pide en el grupo y se agrega una sola vez.
-3. Usar los colores del Figma con Tailwind: `bg-naranja`, `text-gris-500`, `border-gris-100`, `bg-verde-claro`, `text-rojo`...
+3. Usar los colores del Figma con Tailwind: `bg-rojo-hakan` (color de la marca), `text-gris-500`, `border-gris-100`, `bg-verde-claro`, `text-error`...
    Títulos: `className="titulo-1"`, `titulo-2`, `titulo-3`, `display`.
 4. Usar los componentes de `shared/components` (Boton, Campo, Tarjeta...) en vez de crear otros iguales.
 5. Una rama por tarea y pull request para juntar a `main` (ver CONTRIBUTING.md).

@@ -1,6 +1,7 @@
 /* Estilos globales de Hakan Burger con Tailwind CSS.
    Los colores son los del Figma (página "Sistema de diseño"). Se usan así:
-   bg-naranja, text-gris-500, border-gris-100, bg-verde-claro, etc. */
+   bg-rojo-hakan, text-gris-500, border-gris-100, bg-verde-claro, etc.
+   Colores de la marca: rojo, negro y blanco. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 
@@ -9,8 +10,8 @@
 
   --color-negro: #111111;
   --color-blanco: #ffffff;
-  --color-naranja: #ff7a00;
-  --color-naranja-claro: #fff1e5;
+  --color-rojo-hakan: #d7141a; /* color de la marca */
+  --color-rojo-hakan-claro: #fdecec;
   --color-gris-50: #f7f7f7;
   --color-gris-100: #efefef;
   --color-gris-300: #d9d9d9;
@@ -18,8 +19,8 @@
   --color-gris-700: #4a4a4a;
   --color-verde: #1e9e5a;
   --color-verde-claro: #e7f6ee;
-  --color-rojo: #d93025;
-  --color-rojo-claro: #fdecea;
+  --color-error: #a8181f; /* mensajes de error y agotado */
+  --color-error-claro: #fdecea;
 
   /* colores de los responsables (solo para las pantallas en construcción) */
   --color-hilda: #7b3fe4;
