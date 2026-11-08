@@ -30,7 +30,7 @@ export function Campo({ etiqueta, error, ...props }: InputHTMLAttributes<HTMLInp
     <label className="flex flex-col gap-1.5">
       <span className="text-[13px] font-semibold">{etiqueta}</span>
       <input
-        className={`rounded-[10px] border bg-blanco px-3.5 py-3 outline-none focus:border-rojo-hakan ${error ? 'border-error' : 'border-gris-300'}`}
+        className={`w-full min-w-0 rounded-[10px] border bg-blanco px-3.5 py-3 outline-none focus:border-rojo-hakan ${error ? 'border-error' : 'border-gris-300'}`}
         {...props}
       />
       {error && <span className="text-[13px] text-error">{error}</span>}

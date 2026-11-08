@@ -46,7 +46,7 @@ const PASOS = ['Entrega', 'Comprobante', 'Pago', 'Confirmación']
 
 export function PasosCheckout({ actual }: { actual: 1 | 2 | 3 | 4 }) {
   return (
-    <div className="flex flex-wrap items-center gap-2">
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 sm:gap-2">
       {PASOS.map((p, i) => {
         const n = i + 1
         const hecho = n < actual
@@ -61,7 +61,7 @@ export function PasosCheckout({ actual }: { actual: 1 | 2 | 3 | 4 }) {
               {hecho ? <Check size={12} /> : n}
             </span>
             {p}
-            {n < PASOS.length && <span className="h-px w-10 bg-gris-300" />}
+            {n < PASOS.length && <span className="hidden h-px w-10 bg-gris-300 sm:block" />}
           </div>
         )
       })}
