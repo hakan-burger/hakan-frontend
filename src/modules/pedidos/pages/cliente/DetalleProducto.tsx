@@ -1,5 +1,3 @@
-
-
 // Pantalla 02 · Detalle y personalización
 // Responsable: Hilda
 // Ruta: /producto/:id. Leer el id con useParams() y usar obtenerProducto(id). Al agregar: usePedido().agregarProducto(producto, opciones).

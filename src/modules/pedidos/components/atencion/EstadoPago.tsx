@@ -1,4 +1,3 @@
-
 // Etiqueta "Estado del pago" de la bandeja (24) y de revisar pedido (25)
 import type { Pedido } from '../../../../shared/types'
 import { Etiqueta } from '../../../../shared/components/ui'

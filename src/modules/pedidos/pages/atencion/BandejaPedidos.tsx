@@ -1,6 +1,3 @@
-// ARCHIVO: src/modules/pedidos/pages/atencion/BandejaPedidos.tsx
-// Reemplaza TODO el contenido de ese archivo por este código.
-
 // Pantalla 24 · Atención – Bandeja de pedidos
 // Responsable: Eber
 // Usar listarPedidos(estado) del pedidoService.

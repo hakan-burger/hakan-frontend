@@ -1,5 +1,3 @@
-
-
 // Pantalla 18 · Pedido registrado
 // Responsable: Hilda
 // Mostrar usePedido().ultimoPedido (número, estado, total, entrega).

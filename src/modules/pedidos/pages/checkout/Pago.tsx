@@ -1,5 +1,5 @@
 // Pantalla 13, 14 y 15 · Checkout 3 – Método de pago
-// Responsable: Daniel MCD
+// Responsable: Daniel
 // Una página con tres opciones: PagoYapePlin (13), PagoEfectivo (14) y PagoPOS (15). Al continuar: usePedido().setPago(...). Vuelto: calcularVuelto() de shared/utils/calculos.
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'

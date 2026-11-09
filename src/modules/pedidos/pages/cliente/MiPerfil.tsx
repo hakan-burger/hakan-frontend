@@ -1,4 +1,3 @@
-
 // Pantalla 21 · Mi perfil y mis pedidos
 // Responsable: Hilda
 // Usar misPedidos() del pedidoService.

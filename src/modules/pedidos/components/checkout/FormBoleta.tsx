@@ -1,6 +1,5 @@
-
 // Pantalla 11 · Comprobante: boleta
-// Responsable: Daniel MCD
+// Responsable: Daniel
 // Pide DNI, nombre y correo.
 import { Campo, Tarjeta } from '../../../../shared/components/ui'
 import type { DatosBoleta, ErroresBoleta } from '../../services/validarComprobante'

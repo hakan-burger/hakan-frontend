@@ -1,5 +1,3 @@
-
-
 // Pantalla 01 · Carta (catálogo)
 // Responsable: Hilda
 // Usar listarCategorias() y listarProductos(categoriaId, buscar) del catalogoService.
