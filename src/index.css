@@ -21,11 +21,6 @@
   --color-verde-claro: #e7f6ee;
   --color-error: #a8181f; /* mensajes de error y agotado */
   --color-error-claro: #fdecea;
-
-  /* colores de los responsables (solo para las pantallas en construcción) */
-  --color-hilda: #7b3fe4;
-  --color-daniel: #1e6fd9;
-  --color-eber: #0f9d8a;
 }
 
 @layer base {

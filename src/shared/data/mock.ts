@@ -1,5 +1,5 @@
-// Datos de prueba para trabajar mientras el backend no está listo.
-// Son los mismos que aparecen en el Figma.
+// Datos de prueba que se usan con VITE_USAR_MOCK=true.
+// Son los mismos del Figma y los que carga el backend al iniciar.
 import type { Categoria, Producto, Adicional, OpcionTamano, Zona, Direccion, Pedido } from '../types'
 
 export const categorias: Categoria[] = [

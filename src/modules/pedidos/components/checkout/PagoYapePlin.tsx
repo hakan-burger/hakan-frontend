@@ -1,5 +1,4 @@
 // Pantalla 13 · Pago anticipado Yape/Plin
-// Responsable: Daniel
 // Pide el número de operación y la captura del pago.
 import { useRef } from 'react'
 import { Paperclip } from 'lucide-react'
@@ -54,4 +53,3 @@ export default function PagoYapePlin({
     </div>
   )
 }
-

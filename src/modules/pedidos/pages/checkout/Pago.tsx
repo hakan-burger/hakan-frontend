@@ -1,6 +1,5 @@
 // Pantalla 13, 14 y 15 · Checkout 3 – Método de pago
-// Responsable: Daniel MCD
-// Una página con tres opciones: PagoYapePlin (13), PagoEfectivo (14) y PagoPOS (15). Al continuar: usePedido().setPago(...). Vuelto: calcularVuelto() de shared/utils/calculos.
+// Muestra el pago con Yape/Plin (13), en efectivo (14) o con POS (15).
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { Banknote, CreditCard, Smartphone } from 'lucide-react'

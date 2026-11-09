@@ -1,6 +1,5 @@
 // Pantalla 25 · Atención – Revisar pedido y verificar pago
-// Responsable: Eber
-// Ruta: /panel/pedidos/:id. Usar obtenerPedido(id), verificarPago(id) y cambiarEstado(id, "EN_PREPARACION").
+// Ruta: /panel/pedidos/:id
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { CircleAlert, CircleCheck } from 'lucide-react'

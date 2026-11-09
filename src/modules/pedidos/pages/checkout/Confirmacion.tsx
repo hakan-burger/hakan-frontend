@@ -1,6 +1,5 @@
 // Pantalla 16 · Checkout 4 – Resumen y confirmación
-// Responsable: Eberf
-// Antes de confirmar se verifica la disponibilidad (pantalla 17, components/checkout/VerificacionDisponibilidad). Confirmar: await usePedido().confirmar() y navegar a /pedido-registrado.
+// Antes de confirmar se verifica la disponibilidad de los productos (pantalla 17).
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { usePedido } from '../../../../shared/context/PedidoContext'
@@ -120,4 +119,3 @@ export default function Confirmacion() {
     </CheckoutLayout>
   )
 }
-

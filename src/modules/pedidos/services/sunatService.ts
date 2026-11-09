@@ -10,7 +10,7 @@ export interface DatosRuc {
   condicion: string // "HABIDO"
 }
 
-// RUC de prueba mientras no hay backend
+// RUC de prueba para el modo sin backend (VITE_USAR_MOCK=true)
 const RUC_PRUEBA: Record<string, Omit<DatosRuc, 'ruc'>> = {
   '20601234567': { razonSocial: 'INVERSIONES ANDINAS S.A.C.', direccionFiscal: 'Av. Separadora Industrial 320, Ate', estado: 'ACTIVO', condicion: 'HABIDO' },
   '10481391143': { razonSocial: 'ADAUTO CARBAJAL MIGUEL GUSTAVO', direccionFiscal: 'Av. Julio C. Tello 203, Santa Clara, Ate', estado: 'ACTIVO', condicion: 'HABIDO' },
