@@ -1,5 +1,3 @@
-// ARCHIVO: src/modules/pedidos/components/cliente/ProductoNoDisponible.tsx
-// Reemplaza TODO el contenido de ese archivo por este código.
 
 // Pantalla 04 · Carrito: producto no disponible
 // Responsable: Hilda

@@ -1,5 +1,4 @@
-// ARCHIVO: src/modules/pedidos/pages/cliente/Carrito.tsx
-// Reemplaza TODO el contenido de ese archivo por este código.
+
 
 // Pantalla 03 · Carrito
 // Responsable: Hilda
