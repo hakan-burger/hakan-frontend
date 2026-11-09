@@ -1,5 +1,4 @@
 // Pantalla 15 · Pago con POS contraentrega
-// Responsable: Daniel
 // Elige débito o crédito.
 type Tarjeta = 'DEBITO' | 'CREDITO'
 

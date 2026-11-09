@@ -1,6 +1,4 @@
 // Pantalla 01 · Carta (catálogo)
-// Responsable: Hilda
-// Usar listarCategorias() y listarProductos(categoriaId, buscar) del catalogoService.
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import type { Categoria, Producto } from '../../../../shared/types'

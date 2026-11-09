@@ -1,6 +1,5 @@
 // Pantalla 02 · Detalle y personalización
-// Responsable: Hilda
-// Ruta: /producto/:id. Leer el id con useParams() y usar obtenerProducto(id). Al agregar: usePedido().agregarProducto(producto, opciones).
+// Ruta: /producto/:id
 import { useEffect, useState, type ReactNode } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import type { Adicional, Categoria, OpcionTamano, Producto } from '../../../../shared/types'

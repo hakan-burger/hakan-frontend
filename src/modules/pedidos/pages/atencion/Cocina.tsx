@@ -1,6 +1,4 @@
 // Pantalla 28 · Cocina – Pedidos por preparar
-// Responsable: Eber
-// Usar listarPedidos("EN_PREPARACION") y cambiarEstado(id, "LISTO").
 import { useEffect, useState } from 'react'
 import { Clock } from 'lucide-react'
 import type { Pedido } from '../../../../shared/types'
