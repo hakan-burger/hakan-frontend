@@ -90,3 +90,31 @@ agregarProducto(producto, { cantidad: 2, adicionales: [queso] })
 ## Forma de trabajo
 
 Ramas, commits y pull requests: ver [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Datos de prueba, backend local y backend desplegado
+
+| Archivo | Cuándo se usa | Qué hace |
+|---|---|---|
+| `.env` | `pnpm dev` | Datos de prueba (`VITE_USAR_MOCK=true`). Así cualquiera puede trabajar sin el backend. |
+| `.env.local` | `pnpm dev` (solo en tu PC, no se sube) | Para usar el backend en tu PC: `VITE_USAR_MOCK=false` |
+| `.env.production` | `pnpm build` y el despliegue | Usa el backend desplegado: https://hakan-backend.onrender.com/api |
+
+Después de cambiar un `.env` hay que reiniciar `pnpm dev`.
+
+## Despliegue (Render + GitHub Actions)
+
+El workflow `.github/workflows/ci-cd.yml` hace lo siguiente:
+
+- En cada push o pull request a `main` o `development`: revisa el código (oxlint) y compila.
+- En cada push a `main` (por ejemplo, al hacer merge de un PR): si compila, despliega en Render.
+
+Configuración (una sola vez):
+
+1. En Render: **New → Static Site** → repo `hakan-frontend`, rama `main`.
+2. Build Command: `npx --yes pnpm@11.7.0 install --frozen-lockfile && npx --yes pnpm@11.7.0 build`
+   · Publish Directory: `dist` · Variable de entorno `NODE_VERSION` = `24` · Auto-Deploy: **Off**.
+3. En **Redirects/Rewrites** agregar: Source `/*` → Destination `/index.html` → Action **Rewrite**
+   (si no, al recargar `/carrito` o `/producto/1` sale "Not Found").
+4. En Render: **Settings → Deploy Hook** → copiar la URL y guardarla en GitHub
+   (**Settings → Secrets and variables → Actions**) con el nombre `RENDER_DEPLOY_HOOK_URL`.
+5. En el backend (Render), agregar la URL del frontend a la variable `APP_CORS_ORIGENES`.

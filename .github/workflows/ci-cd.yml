@@ -1,0 +1,50 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main, development]
+  pull_request:
+    branches: [main, development]
+
+jobs:
+  compilar:
+    name: Revisar y compilar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Instalar Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: pnpm
+
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+
+      - name: Revisar código (oxlint)
+        run: pnpm lint
+
+      - name: Compilar
+        run: pnpm build
+
+  desplegar:
+    name: Desplegar en Render
+    needs: compilar
+    # Solo cuando se hace push (o merge de un PR) a main
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Llamar al Deploy Hook de Render
+        env:
+          DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK" ]; then
+            echo "::error::Falta el secreto RENDER_DEPLOY_HOOK_URL (Settings > Secrets and variables > Actions)"
+            exit 1
+          fi
+          curl -fsS -X POST "$DEPLOY_HOOK"
+          echo "Despliegue iniciado en Render"
