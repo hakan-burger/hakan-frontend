@@ -1,6 +1,4 @@
 // Pantalla 09 · Checkout 1 – Modalidad y dirección de entrega
-// Responsable: Daniel
-// Al continuar: usePedido().setEntrega({ modalidad, direccion, celularContacto }). Usar <CheckoutLayout paso={1} ...> de shared/components/pedido.
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { MapPin, Store, Truck } from 'lucide-react'

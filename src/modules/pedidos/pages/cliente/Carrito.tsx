@@ -1,7 +1,4 @@
-
-
 // Pantalla 03 · Carrito
-// Responsable: Hilda
 // Si un producto del carrito ya no está disponible se muestra el estado de la pantalla 04 (components/cliente/ProductoNoDisponible).
 import { Fragment, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'

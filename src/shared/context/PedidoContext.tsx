@@ -1,5 +1,4 @@
 // Estado del pedido en curso: carrito + datos del checkout.
-// Lo usan Hilda (carrito), Daniel (entrega, comprobante, pago) y Eber (resumen y confirmación).
 // Se guarda en el navegador para no perder el carrito al recargar la página.
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import type { Comprobante, Entrega, ItemCarrito, Pago, Pedido, Producto, Totales } from '../types'
@@ -16,16 +15,16 @@ interface PedidoEnCurso {
 interface PedidoContextValue extends PedidoEnCurso {
   totales: Totales
   cantidadItems: number
-  // carrito (Hilda)
+  // carrito
   agregarProducto: (producto: Producto, opciones?: Partial<Omit<ItemCarrito, 'idLinea' | 'producto'>>) => void
   cambiarCantidad: (idLinea: string, cantidad: number) => void
   quitarItem: (idLinea: string) => void
   reemplazarProducto: (idLinea: string, nuevo: Producto) => void
-  // checkout (Daniel)
+  // checkout
   setEntrega: (entrega: Entrega) => void
   setComprobante: (comprobante: Comprobante) => void
   setPago: (pago: Pago) => void
-  // confirmación (Eber)
+  // confirmación
   confirmar: () => Promise<Pedido>
   ultimoPedido?: Pedido // para la pantalla 18
   vaciar: () => void

@@ -1,5 +1,4 @@
 // Pantalla 14 · Pago contraentrega (efectivo)
-// Responsable: Daniel
 // Pide con cuánto paga y muestra el vuelto.
 import { Campo } from '../../../../shared/components/ui'
 import { calcularVuelto, soles } from '../../../../shared/utils/calculos'

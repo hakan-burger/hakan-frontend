@@ -1,7 +1,5 @@
-
 // Pantalla 04 · Carrito: producto no disponible
-// Responsable: Hilda
-// Se muestra dentro de Carrito cuando verificarDisponibilidad() devuelve productos agotados. Quitar o reemplazar con usePedido().quitarItem / reemplazarProducto.
+// Se muestra dentro del carrito cuando un producto se agotó; permite quitarlo o reemplazarlo.
 import { Trash2 } from 'lucide-react'
 import type { ItemCarrito, Producto } from '../../../../shared/types'
 import { Alerta, Boton, Etiqueta, FotoProducto } from '../../../../shared/components/ui'

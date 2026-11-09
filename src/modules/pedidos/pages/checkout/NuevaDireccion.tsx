@@ -1,6 +1,4 @@
 // Pantalla 10 · Checkout 1 – Registrar nueva dirección de entrega
-// Responsable: Daniel
-// Zonas y tarifas de prueba en shared/data/mock.ts (zonas).
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { usePedido } from '../../../../shared/context/PedidoContext'

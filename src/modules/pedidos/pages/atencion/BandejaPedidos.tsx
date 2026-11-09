@@ -1,9 +1,4 @@
-// ARCHIVO: src/modules/pedidos/pages/atencion/BandejaPedidos.tsx
-// Reemplaza TODO el contenido de ese archivo por este código.
-
 // Pantalla 24 · Atención – Bandeja de pedidos
-// Responsable: Eber
-// Usar listarPedidos(estado) del pedidoService.
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { EstadoPedido, Pedido } from '../../../../shared/types'

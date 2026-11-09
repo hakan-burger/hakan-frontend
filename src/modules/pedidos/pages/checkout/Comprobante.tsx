@@ -1,6 +1,5 @@
 // Pantalla 11 y 12 · Checkout 2 – Comprobante (boleta / factura)
-// Responsable: Daniel
-// Una página con dos opciones: components/checkout/FormBoleta (11) y FormFactura (12). Al continuar: usePedido().setComprobante(...).
+// Muestra el formulario de boleta (11) o de factura (12).
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { ReceiptText } from 'lucide-react'

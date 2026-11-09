@@ -1,8 +1,5 @@
-
-
 // Pantalla 18 · Pedido registrado
-// Responsable: Hilda
-// Mostrar usePedido().ultimoPedido (número, estado, total, entrega).
+// Muestra el número, estado, total y entrega del pedido recién registrado.
 import { Link } from 'react-router-dom'
 import { CircleCheck } from 'lucide-react'
 import { usePedido } from '../../../../shared/context/PedidoContext'

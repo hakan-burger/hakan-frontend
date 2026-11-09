@@ -1,6 +1,4 @@
 // Pantalla 29 · Atención – Disponibilidad de productos
-// Responsable: Eber
-// Usar listarProductos() y cambiarDisponibilidad(id, disponible) del catalogoService.
 import { useEffect, useState } from 'react'
 import type { Categoria, Producto } from '../../../../shared/types'
 import { cambiarDisponibilidad, listarCategorias, listarProductos } from '../../../../shared/services/catalogoService'

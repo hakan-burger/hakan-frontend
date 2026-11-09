@@ -1,23 +1,23 @@
 // Rutas del módulo Gestión de pedidos.
-// Cada ruta apunta a la pantalla de su responsable (ver el número en el comentario).
+// El comentario de cada ruta es el número de la pantalla en el Figma.
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { PedidoProvider } from './shared/context/PedidoContext'
 import ClienteLayout from './shared/layouts/ClienteLayout'
 import PanelLayout from './shared/layouts/PanelLayout'
 
-// Cliente – Hilda
+// Cliente
 import Carta from './modules/pedidos/pages/cliente/Carta'
 import DetalleProducto from './modules/pedidos/pages/cliente/DetalleProducto'
 import Carrito from './modules/pedidos/pages/cliente/Carrito'
 import PedidoRegistrado from './modules/pedidos/pages/cliente/PedidoRegistrado'
 import MiPerfil from './modules/pedidos/pages/cliente/MiPerfil'
-// Checkout – Daniel (09 a 15) y Eber (16 y 17)
+// Checkout
 import Entrega from './modules/pedidos/pages/checkout/Entrega'
 import NuevaDireccion from './modules/pedidos/pages/checkout/NuevaDireccion'
 import Comprobante from './modules/pedidos/pages/checkout/Comprobante'
 import Pago from './modules/pedidos/pages/checkout/Pago'
 import Confirmacion from './modules/pedidos/pages/checkout/Confirmacion'
-// Atención – Eber
+// Atención
 import BandejaPedidos from './modules/pedidos/pages/atencion/BandejaPedidos'
 import RevisarPedido from './modules/pedidos/pages/atencion/RevisarPedido'
 import Cocina from './modules/pedidos/pages/atencion/Cocina'

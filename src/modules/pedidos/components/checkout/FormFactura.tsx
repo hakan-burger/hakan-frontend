@@ -1,5 +1,4 @@
 // Pantalla 12 · Comprobante: factura (validación de RUC)
-// Responsable: Daniel
 // Pide RUC (11 dígitos), razón social, dirección fiscal y correo.
 import { useState } from 'react'
 import { Alerta, Boton, Campo, Tarjeta } from '../../../../shared/components/ui'
