@@ -72,7 +72,7 @@ export default function Carta() {
             <a href="#carta" className={`${claseBoton('primario')} w-fit`}>Comienza tu pedido</a>
           </div>
           <div className="w-full overflow-hidden rounded-2xl md:w-[520px]">
-            <FotoProducto alto={300} texto="Foto de la promoción" />
+            <FotoProducto src="/img/productos/promo-limonada.webp" alto={300} texto="Promo 2x1 en Limonada Frozen" />
           </div>
         </div>
       </section>
