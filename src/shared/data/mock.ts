@@ -24,6 +24,9 @@ const adicionalesHamburguesa: Adicional[] = [
 
 const quitables = ['Sin cebolla', 'Sin tomate', 'Sin lechuga']
 
+// Fotos en public/img/productos (créditos en CREDITOS.md de esa carpeta)
+const foto = (nombre: string) => `/img/productos/${nombre}.webp`
+
 const hamburguesa = (p: Pick<Producto, 'id' | 'nombre' | 'descripcion' | 'precio'> & Partial<Producto>): Producto => ({
   categoriaId: 1,
   disponible: true,
@@ -42,17 +45,17 @@ const simple = (p: Pick<Producto, 'id' | 'nombre' | 'descripcion' | 'precio' | '
 })
 
 export const productos: Producto[] = [
-  hamburguesa({ id: 1, nombre: 'Hakan Royal', descripcion: 'Doble carne, huevo, plátano, queso y jamón', precio: 27.9, etiqueta: 'Más pedida' }),
-  hamburguesa({ id: 2, nombre: 'Clásica', descripcion: 'Carne 100% res, lechuga, tomate y queso', precio: 21.9 }),
-  hamburguesa({ id: 3, nombre: 'Hawaiana', descripcion: 'Carne, piña a la plancha, jamón y queso', precio: 23.9 }),
-  hamburguesa({ id: 4, nombre: 'Hamburguesa BBQ', descripcion: 'Carne 100% res, tocino crocante, queso cheddar y salsa BBQ de la casa', precio: 24.9, etiqueta: 'Nuevo' }),
-  hamburguesa({ id: 5, nombre: 'Pollo Crispy', descripcion: 'Filete de pollo crocante y coleslaw', precio: 22.9, disponible: false }),
-  simple({ id: 6, nombre: 'Alitas BBQ (6 und.)', descripcion: 'Con papas y crema a elección', precio: 22.9, categoriaId: 2 }),
-  simple({ id: 7, nombre: 'Salchipapa Hakan', descripcion: 'Papas nativas, hot dog y cremas', precio: 18.9, categoriaId: 3 }),
-  simple({ id: 8, nombre: 'Shawarma de pollo', descripcion: 'Pollo, verduras y salsa de ajo', precio: 19.9, categoriaId: 4 }),
-  simple({ id: 9, nombre: 'Limonada Frozen', descripcion: 'Vaso de 500 ml', precio: 8, categoriaId: 5, etiqueta: 'Promo 2x1' }),
-  simple({ id: 10, nombre: 'Chicha morada 1 L', descripcion: 'Hecha en casa', precio: 9, categoriaId: 5 }),
-  simple({ id: 11, nombre: 'Gaseosa 500 ml', descripcion: 'Inca Kola o Coca-Cola', precio: 4.5, categoriaId: 5 }),
+  hamburguesa({ id: 1, nombre: 'Hakan Royal', descripcion: 'Doble carne, huevo, plátano, queso y jamón', precio: 27.9, etiqueta: 'Más pedida', imagenUrl: foto('hakan-royal') }),
+  hamburguesa({ id: 2, nombre: 'Clásica', descripcion: 'Carne 100% res, lechuga, tomate y queso', precio: 21.9, imagenUrl: foto('clasica') }),
+  hamburguesa({ id: 3, nombre: 'Hawaiana', descripcion: 'Carne, piña a la plancha, jamón y queso', precio: 23.9, imagenUrl: foto('hawaiana') }),
+  hamburguesa({ id: 4, nombre: 'Hamburguesa BBQ', descripcion: 'Carne 100% res, tocino crocante, queso cheddar y salsa BBQ de la casa', precio: 24.9, etiqueta: 'Nuevo', imagenUrl: foto('hamburguesa-bbq') }),
+  hamburguesa({ id: 5, nombre: 'Pollo Crispy', descripcion: 'Filete de pollo crocante y coleslaw', precio: 22.9, disponible: false, imagenUrl: foto('pollo-crispy') }),
+  simple({ id: 6, nombre: 'Alitas BBQ (6 und.)', descripcion: 'Con papas y crema a elección', precio: 22.9, categoriaId: 2, imagenUrl: foto('alitas-bbq') }),
+  simple({ id: 7, nombre: 'Salchipapa Hakan', descripcion: 'Papas nativas, hot dog y cremas', precio: 18.9, categoriaId: 3, imagenUrl: foto('salchipapa') }),
+  simple({ id: 8, nombre: 'Shawarma de pollo', descripcion: 'Pollo, verduras y salsa de ajo', precio: 19.9, categoriaId: 4, imagenUrl: foto('shawarma-pollo') }),
+  simple({ id: 9, nombre: 'Limonada Frozen', descripcion: 'Vaso de 500 ml', precio: 8, categoriaId: 5, etiqueta: 'Promo 2x1', imagenUrl: foto('limonada-frozen') }),
+  simple({ id: 10, nombre: 'Chicha morada 1 L', descripcion: 'Hecha en casa', precio: 9, categoriaId: 5, imagenUrl: foto('chicha-morada') }),
+  simple({ id: 11, nombre: 'Gaseosa 500 ml', descripcion: 'Inca Kola o Coca-Cola', precio: 4.5, categoriaId: 5, imagenUrl: foto('gaseosa') }),
 ]
 
 export const zonas: Zona[] = [

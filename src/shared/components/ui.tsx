@@ -63,9 +63,9 @@ export function Tarjeta({ children, className = '', seleccionada }: { children: 
   )
 }
 
-// Recuadro gris en lugar de las fotos (hasta tener las fotos reales)
+// Foto del producto; si no tiene, muestra un recuadro gris con el texto
 export function FotoProducto({ src, alto = 190, texto = 'Foto del producto' }: { src?: string; alto?: number; texto?: string }) {
-  if (src) return <img src={src} alt={texto} className="w-full object-cover" style={{ height: alto }} />
+  if (src) return <img src={src} alt={texto} loading="lazy" className="w-full bg-gris-100 object-cover" style={{ height: alto }} />
   return (
     <div className="flex w-full flex-col items-center justify-center gap-1.5 bg-gris-100 text-gris-500" style={{ height: alto }}>
       <ImageIcon size={20} />
