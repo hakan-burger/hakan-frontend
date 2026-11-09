@@ -1,5 +1,5 @@
 // Pantalla 17 · Verificación de disponibilidad antes de confirmar
-// Responsable: Eber
+// Responsable: Eberf
 // Se muestra en Confirmacion si verificarDisponibilidad() devuelve productos agotados.
 import { Fragment } from 'react'
 import { CircleCheck, CircleX } from 'lucide-react'
